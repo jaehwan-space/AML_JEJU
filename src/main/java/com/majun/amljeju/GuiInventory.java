@@ -26,13 +26,13 @@ public class GuiInventory extends GuiContainer {
 
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         super.drawScreen(mouseX, mouseY, partialTicks);
-        this.oldMouseX = mouseX;
-        this.oldMouseY = mouseY;
+        oldMouseX = mouseX;
+        oldMouseY = mouseY;
         renderHoveredToolTip(mouseX, mouseY);
     }
 
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
-        ScaledResolution res = new ScaledResolution(this.mc);
+        ScaledResolution res = new ScaledResolution(mc);
         float xx = (float)res.getScaledWidth_double() / 1280.0F;
         float yy = (float)res.getScaledHeight_double() / 720.0F;
         drawDefaultBackground();
@@ -41,26 +41,26 @@ public class GuiInventory extends GuiContainer {
         GlStateManager.enableAlpha();
         OpenGlHelper.glBlendFunc(770, 771, 1, 0);
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        GlStateManager.translate((this.width / 2.0F) - 360.0D, (this.height / 2.0F) - 202.5D, 1.0D);  //그리기 시작하는 위치 맞추기(리소스 사이즈에서 4나누기 하면  350, 270 자리 값 나옴)
+        GlStateManager.translate((width / 2.0F) - 360.0D, (height / 2.0F) - 202.5D, 1.0D);  //그리기 시작하는 위치 맞추기(리소스 사이즈에서 4나누기 하면  350, 270 자리 값 나옴)
         GlStateManager.scale(0.375D, 0.3755, 0.375D);
         GL11.glBlendFunc(770, 771);
-        this.mc.getTextureManager().bindTexture(new ResourceLocation("amljeju", "textures/gui/default.png"));
+        mc.getTextureManager().bindTexture(new ResourceLocation("amljeju", "textures/gui/inventory.png"));
         drawModalRectWithCustomSizedTexture(0, 0, 0.0F, 0.0F, 1920, 1080, 1920.0F, 1080.0F);
         GlStateManager.disableBlend();
         GlStateManager.disableAlpha();
         GL11.glPopMatrix();
         GlStateManager.pushMatrix();
-        GlStateManager.translate(this.width / 2.0F - 187.0F, this.height / 2.0F + -6.0F, 30.0F); // 플레이어 모델 그리는 위치 지정
-        net.minecraft.client.gui.inventory.GuiInventory.drawEntityOnScreen(90, 0, 45, (this.guiLeft + 51) - this.oldMouseX, (this.guiTop + 75 - 50) - this.oldMouseY, (EntityLivingBase)this.mc.player);  //플레이어 모델 그리기
+        GlStateManager.translate(width / 2.0F - 187.0F, height / 2.0F + -6.0F, 30.0F); // 플레이어 모델 그리는 위치 지정
+        net.minecraft.client.gui.inventory.GuiInventory.drawEntityOnScreen(90, 0, 45, (guiLeft + 51) - oldMouseX, (guiTop + 75 - 50) - oldMouseY, (EntityLivingBase)mc.player);  //플레이어 모델 그리기
         GlStateManager.popMatrix();
         drawActivePotionEffects();
     }
 
     private void drawActivePotionEffects() {
-        int i = this.guiLeft - 162;
-        int j = this.guiTop;
+        int i = guiLeft - 162;
+        int j = guiTop;
         int k = 166;
-        Collection<PotionEffect> collection = this.mc.player.getActivePotionEffects();
+        Collection<PotionEffect> collection = mc.player.getActivePotionEffects();
         if (!collection.isEmpty()) {
             GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
             GlStateManager.disableLighting();
@@ -72,13 +72,13 @@ public class GuiInventory extends GuiContainer {
                 if (!potion.shouldRender(potioneffect))
                     continue;
                 GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-                this.mc.getTextureManager().bindTexture(INVENTORY_BACKGROUND);
+                mc.getTextureManager().bindTexture(INVENTORY_BACKGROUND);
                 drawTexturedModalRect(i, j, 0, 166, 140, 32);
                 if (potion.hasStatusIcon()) {
                     int i1 = potion.getStatusIconIndex();
                     drawTexturedModalRect(i + 6, j + 7, 0 + i1 % 8 * 18, 198 + i1 / 8 * 18, 18, 18);
                 }
-                potion.renderInventoryEffect(i, j, potioneffect, this.mc);
+                potion.renderInventoryEffect(i, j, potioneffect, mc);
                 if (!potion.shouldRenderInvText(potioneffect)) {
                     j += l;
                     continue;
@@ -91,9 +91,9 @@ public class GuiInventory extends GuiContainer {
                 } else if (potioneffect.getAmplifier() == 3) {
                     s1 = s1 + " " + I18n.format("enchantment.level.4");
                 }
-                this.fontRenderer.drawStringWithShadow(s1, (i + 10 + 18), (j + 6), 16777215);
+                fontRenderer.drawStringWithShadow(s1, (i + 10 + 18), (j + 6), 16777215);
                 String s = Potion.getPotionDurationString(potioneffect, 1.0F);
-                this.fontRenderer.drawStringWithShadow(s, (i + 10 + 18), (j + 6 + 10), 8355711);
+                fontRenderer.drawStringWithShadow(s, (i + 10 + 18), (j + 6 + 10), 8355711);
                 j += l;
             }
         }

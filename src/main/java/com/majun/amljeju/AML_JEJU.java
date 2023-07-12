@@ -1,13 +1,16 @@
 package com.majun.amljeju;
 
+import com.majun.amljeju.command.CommandShop;
 import com.majun.amljeju.network.GUIHandler;
 import com.majun.amljeju.network.PacketSystem;
 import com.majun.amljeju.proxy.CommonProxy;
+import net.minecraft.command.ICommand;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.network.IGuiHandler;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import org.apache.logging.log4j.Logger;
@@ -19,6 +22,7 @@ public class AML_JEJU
     public static final String NAME = "AML_JEJU";
     public static final String VERSION = "1.0";
     public static float guiScale = 0.5F;
+    public static int guistat = 0;
 
     private static Logger logger;
 
@@ -39,4 +43,8 @@ public class AML_JEJU
         proxy.init(event);
     }
 
+    @EventHandler
+    public void onServerStarting(FMLServerStartingEvent event) {
+        event.registerServerCommand((ICommand) new CommandShop());
+    }
 }
