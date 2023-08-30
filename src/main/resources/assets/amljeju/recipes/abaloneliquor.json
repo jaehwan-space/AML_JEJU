@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "BC"
+  ],
+  "key": {
+    "A": {
+      "item": "jejulifemod:abalone",
+      "data": 0
+    },
+    "B": {
+      "item": "harvestcraft:riceitem",
+      "data": 0
+    },
+    "C": {
+      "item": "minecraft:potion",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:abaloneliquor",
+    "data": 0
+  }
+}

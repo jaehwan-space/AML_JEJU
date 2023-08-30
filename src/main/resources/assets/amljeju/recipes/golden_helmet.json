@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "A A"
+  ],
+  "key": {
+    "A": {
+      "item": "amljeju:smelted_gold",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "minecraft:golden_helmet",
+    "data": 0
+  }
+}

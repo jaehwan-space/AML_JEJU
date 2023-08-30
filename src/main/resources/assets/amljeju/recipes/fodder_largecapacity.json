@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "jejulifemod:fodder",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:fodder_largecapacity",
+    "data": 0
+  }
+}

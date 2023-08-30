@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "III",
+    "AAA"
+  ],
+  "key": {
+    "I": {
+      "item": "harvestcraft:breadfruititem",
+      "data": 0
+    },
+    "A": {
+      "item": "minecraft:paper",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:tangerine_box",
+    "data": 0
+  }
+}

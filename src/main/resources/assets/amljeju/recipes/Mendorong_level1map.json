@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+  [
+      "ABC",
+      "ABC"
+  ],
+
+  "key":
+  {
+      "A":
+      {
+          "item": "minecraft:paper",
+          "data": 0
+      },
+
+      "B":
+      {
+          "item": "minecraft:planks",
+          "data": 0
+      },
+      
+      "C":
+      {
+          "item": "minecraft:glass",
+          "data": 0
+      }
+  },
+
+  "result": {
+    "item": "amljeju:level1_map_0",
+    "data": 0
+  }
+}

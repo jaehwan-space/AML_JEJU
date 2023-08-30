@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABB",
+    "C  "
+  ],
+  "key": {
+    "A": {
+      "item": "harvestcraft:breadfruititem",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:leather",
+      "data": 0
+    },
+    "C": {
+      "item": "amljeju:smelted_gold",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:tangerine_hat",
+    "data": 0
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "BBB",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:wool",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:paper",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "props:props",
+    "data": 1943
+  }
+}

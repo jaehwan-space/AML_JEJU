@@ -20,13 +20,14 @@ public class GuiButtonImage extends GuiButton {
             hovered = (mouseX >= x && mouseY >= y && mouseX < x + width && mouseY < y + height);
             GlStateManager.disableDepth();
             if (hovered) {
-                DrawManager.drawTexture(texture + "_h", x, y, 1.0D, width, height);
+                DrawManager.drawTexture("gui/" + texture + "_h", x, y, -1.0D, 1.0D, width, height);
             } else {
-                DrawManager.drawTexture(texture , x, y, 1.0D, width, height);
+                DrawManager.drawTexture("gui/" + texture , x, y, -1.0D, 1.0D, width, height);
             }
             GlStateManager.enableDepth();
         }
     }
+
 
     public GuiButtonImage setVisible(boolean visible) {
         this.visible = visible;

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BB",
+    "AA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:planks",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:log",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "props:props",
+    "data": 607
+  }
+}

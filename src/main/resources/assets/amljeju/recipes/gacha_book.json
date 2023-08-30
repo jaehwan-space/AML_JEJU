@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+  [
+      "AA",
+      "BC"
+  ],
+
+  "key":
+  {
+      "A":
+      {
+          "item": "minecraft:paper",
+          "data": 0
+      },
+
+      "B":
+      {
+          "item": "minecraft:leather",
+          "data": 0
+      },
+      
+      "C":
+      {
+          "item": "minecraft:planks",
+          "data": 0
+      }
+  },
+
+  "result": {
+    "item": "amljeju:gacha_book",
+    "data": 0
+  }
+}

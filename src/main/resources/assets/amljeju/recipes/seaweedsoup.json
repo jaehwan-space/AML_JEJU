@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAC"
+  ],
+  "key": {
+    "A": {
+      "item": "jejulifemod:dried_seaweed",
+      "data": 0
+    },
+    "C": {
+      "item": "minecraft:bowl",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:seaweedsoup",
+    "data": 0
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AB",
+    "CC"
+  ],
+  "key": {
+    "A": {
+      "item": "harvestcraft:breadfruititem",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:glass",
+      "data": 0
+    },
+    "C": {
+      "item": "minecraft:planks",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:tangerine_keychain",
+    "data": 0
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "BCC"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:paper",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:dye",
+      "data": 6
+    },
+    "C": {
+      "item": "jejulifemod:basalt",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:picture_grade_b",
+    "data": 0
+  }
+}

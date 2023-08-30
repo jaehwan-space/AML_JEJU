@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABB"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:dye",
+      "data": 3
+    },
+    "B": {
+      "item": "harvestcraft:breadfruititem",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:tangerine_chocolate",
+    "data": 0
+  }
+}

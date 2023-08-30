@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "BB "
+  ],
+  "key": {
+    "A": {
+      "item": "harvestcraft:breadfruititem",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:sugar",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:tangerine_jam",
+    "data": 0
+  }
+}

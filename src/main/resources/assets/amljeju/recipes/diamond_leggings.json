@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "A A",
+    "A A"
+  ],
+  "key": {
+    "A": {
+      "item": "amljeju:smelted_diamond",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "minecraft:diamond_leggings",
+    "data": 0
+  }
+}

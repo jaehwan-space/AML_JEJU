@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CC"
+  ],
+  "key": {
+    "C": {
+      "item": "harvestcraft:breadfruititem",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "gmm:alcohol_material_3",
+    "data": 0
+  }
+}

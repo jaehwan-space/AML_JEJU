@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AB"
+  ],
+  "key": {
+    "A": {
+      "item": "amljeju:makgeolli",
+      "data": 0
+    },
+    "B": {
+      "item": "amljeju:makgeolli_cup",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "amljeju:makgeolli_package",
+    "data": 0
+  }
+}

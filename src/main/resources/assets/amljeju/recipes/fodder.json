@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "B  "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:wheat",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:potato",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:fodder",
+    "data": 0
+  }
+}

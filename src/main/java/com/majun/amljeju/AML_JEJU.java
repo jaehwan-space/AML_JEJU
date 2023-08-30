@@ -1,10 +1,14 @@
 package com.majun.amljeju;
 
 import com.majun.amljeju.command.CommandShop;
-import com.majun.amljeju.network.GUIHandler;
-import com.majun.amljeju.network.PacketSystem;
+import com.majun.amljeju.manager.InvHandler;
+import com.majun.amljeju.network.NetworkManager;
+import com.majun.amljeju.proxy.ClientProxy;
 import com.majun.amljeju.proxy.CommonProxy;
 import net.minecraft.command.ICommand;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -13,18 +17,13 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.network.IGuiHandler;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = AML_JEJU.MODID, name = AML_JEJU.NAME, version = AML_JEJU.VERSION, acceptedMinecraftVersions = "[1.12.2]")
+@Mod(modid = Data.MODID, name = Data.NAME, version = Data.VERSION, acceptedMinecraftVersions = "[1.12.2]")
 public class AML_JEJU
 {
-    public static final String MODID = "amljeju";
-    public static final String NAME = "AML_JEJU";
-    public static final String VERSION = "1.0";
-    public static float guiScale = 0.5F;
-    public static int guistat = 0;
-
-    private static Logger logger;
+    public static Logger logger;
 
     @SidedProxy(clientSide = "com.majun.amljeju.proxy.ClientProxy", serverSide = "com.majun.amljeju.proxy.CommonProxy")
     public static CommonProxy proxy;
@@ -32,10 +31,16 @@ public class AML_JEJU
     @Mod.Instance("amljeju")
     public static AML_JEJU instance;
 
+    public AML_JEJU() {
+        instance = this;
+    }
+
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        NetworkRegistry.INSTANCE.registerGuiHandler(instance, (IGuiHandler) new GUIHandler());
-        PacketSystem.init();
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, (IGuiHandler) new InvHandler());
+        NetworkManager.setup();  //마크 실행 시 패킷 실행
+        if(FMLCommonHandler.instance().getSide().isClient())
+            ClientProxy.updateIcon(); // 아이콘 변경
     }
 
     @EventHandler
@@ -47,4 +52,5 @@ public class AML_JEJU
     public void onServerStarting(FMLServerStartingEvent event) {
         event.registerServerCommand((ICommand) new CommandShop());
     }
+
 }

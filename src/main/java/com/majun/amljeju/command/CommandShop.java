@@ -1,19 +1,12 @@
 package com.majun.amljeju.command;
 
-import com.majun.amljeju.gui.GuiShop;
-import com.majun.amljeju.network.NetworkManager;
-import com.majun.amljeju.network.PacketOpenShop;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiScreen;
+
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.command.PlayerNotFoundException;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.MinecraftServer;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
-
-import java.util.Iterator;
 
 public class CommandShop extends CommandBase {
     public String getName() {
@@ -28,9 +21,10 @@ public class CommandShop extends CommandBase {
         if(args[0].equalsIgnoreCase("열기")){
             NBTTagCompound data;
             data = new NBTTagCompound();
+            data.setInteger("ddd", 3);
             EntityPlayerMP player = getCommandSenderAsPlayer(sender);
 //            NetworkManager.sendTo((IMessage)new PacketOpenShop(data), player);
-            Minecraft.getMinecraft().displayGuiScreen((GuiScreen) new GuiShop(/*message.compound*/));
+//            Minecraft.getMinecraft().displayGuiScreen((GuiScreen) new Gui_Shop(/*message.compound*/));
         }
 //        try {
 //            NBTTagCompound data;

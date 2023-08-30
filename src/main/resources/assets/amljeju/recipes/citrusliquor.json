@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAC",
+    "BB "
+  ],
+  "key": {
+    "A": {
+      "item": "harvestcraft:breadfruititem",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:sugar",
+      "data": 0
+    },
+    "C": {
+      "item": "minecraft:potion",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:citrusliquor",
+    "data": 0
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "amljeju:smelted_gold",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:stick",
+      "data": 0
+    },
+    "C": {
+      "item": "amljeju:smelted_iron",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:collectiontool",
+    "data": 0
+  }
+}

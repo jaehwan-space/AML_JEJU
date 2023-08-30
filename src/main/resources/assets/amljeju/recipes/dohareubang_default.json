@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "BB "
+  ],
+  "key": {
+    "A": {
+      "item": "jejulifemod:basalt",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:cobblestone",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:dolhareubang_default",
+    "data": 0
+  }
+}

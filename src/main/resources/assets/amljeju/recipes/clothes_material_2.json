@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABB"
+  ],
+  "key": {
+    "A": {
+      "item": "gmm:clothes_fabric",
+      "data": 0
+    },
+    "B": {
+      "item": "amljeju:smelted_iron",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "gmm:clothes_material_2",
+    "data": 0
+  }
+}

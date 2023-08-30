@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "A A"
+  ],
+  "key": {
+    "A": {
+      "item": "amljeju:smelted_iron",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "minecraft:iron_helmet",
+    "data": 0
+  }
+}

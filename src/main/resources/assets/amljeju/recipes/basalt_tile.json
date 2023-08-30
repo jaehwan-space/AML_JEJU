@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "BBB",
+    "CCC"
+  ],
+  "key": {
+    "A": {
+      "item": "jejulifemod:basalt",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:cobblestone",
+      "data": 0
+    },
+    "C": {
+      "item": "minecraft:planks",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:basalt_tile",
+    "data": 0
+  }
+}

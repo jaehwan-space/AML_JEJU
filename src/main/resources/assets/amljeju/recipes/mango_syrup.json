@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AB"
+  ],
+  "key": {
+    "A": {
+      "item": "harvestcraft:mangoitem",
+      "count": 2
+    },
+    "B": {
+      "item": "minecraft:sugar",
+      "count": 2
+    }
+  },
+  "result": {
+    "item": "amljeju:mango_syrup",
+    "data": 0
+  }
+}

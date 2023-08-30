@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    "CCC"
+  ],
+  "key": {
+    "A": {
+      "item": "harvestcraft:breadfruititem",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:paper",
+      "data": 0
+    },
+    "C": {
+      "item": "minecraft:leather",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "jejulifemod:tangerine_pajamas",
+    "data": 0
+  }
+}
