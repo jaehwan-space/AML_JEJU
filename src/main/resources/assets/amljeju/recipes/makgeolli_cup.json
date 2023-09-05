@@ -1,19 +1,30 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
+
+  "pattern": 
+[
+
     "AAB"
-  ],
-  "key": {
-    "A": {
+
+
+    ],
+
+  "key": 
+{
+    "A": 
+{
       "item": "minecraft:glass",
       "data": 0
     },
-    "B": {
-      "item": "amljeju:smelted_gold",
+    "B": 
+{
+      "item": "minecraft:gold_ingot",
       "data": 0
     }
   },
-  "result": {
+
+  "result": 
+{
     "item": "amljeju:makgeolli_cup",
     "data": 0
   }

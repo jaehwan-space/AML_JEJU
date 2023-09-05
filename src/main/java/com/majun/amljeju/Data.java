@@ -10,7 +10,7 @@ import java.util.Random;
 public class Data {
     public static final String MODID = "amljeju";
     public static final String NAME = "AML_JEJU";
-    public static final String VERSION = "1.3";
+    public static final String VERSION = "1.4";
     public static int guistat = 0;  // 0:기본 HUD가 표시되는 상태, 1:HUD가 표시되지 않고 다른 GUI가 표시됨(상점)
     public static int call_stat = 0; //0: 기본 상태, 1:통화 요청이 들어온 상태
     public static int Money = 0;

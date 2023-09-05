@@ -181,6 +181,8 @@ public class ClientProxy extends CommonProxy {
             String[] InfoData = packetData.split("\\^\\^\\^");
             if(InfoData[0].contains("MoneyStat"))
                 Data.Money = Integer.valueOf(InfoData[1]);
+            else if(InfoData[0].contains("Timer"))
+                HUD.Timerupdate(Integer.valueOf(InfoData[1]));
             else if(InfoData[0].contains("ShopUpdate"))
                Gui_Shop.UpdateShop(packetData);
             else if(InfoData[0].contains("ShopOpen"))

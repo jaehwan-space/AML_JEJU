@@ -28,6 +28,15 @@ public class ItemInit {
     public static Item LEVE3_MAP_3 = (new ItemBase("level3_map_3")).setMaxStackSize(1);
     public static Item LEVE3_MAP_4 = (new ItemBase("level3_map_4")).setMaxStackSize(1);
 
+    public static Item SEA_RAMEN_RARE = (new ItemBase("sea_ramen_rare")).setMaxStackSize(64);
+    public static Item SEA_RAMEN = (new ItemBase("sea_ramen")).setMaxStackSize(64);
+    public static Item SEA_URCHIN_BIBIMBAB = (new ItemBase("sea_urchin_bibimbab")).setMaxStackSize(64);
+
+    public static Item RESIDENT_CARD1 = (new ItemBase("resident_card1")).setMaxStackSize(1);
+    public static Item RESIDENT_CARD2 = (new ItemBase("resident_card2")).setMaxStackSize(1);
+    public static Item RESIDENT_CARD3 = (new ItemBase("resident_card3")).setMaxStackSize(1);
+    public static Item RESIDENT_CARD4 = (new ItemBase("resident_card4")).setMaxStackSize(1);
+    public static Item RESIDENT_CARD5 = (new ItemBase("resident_card5")).setMaxStackSize(1);
 
     public static Item STRAWBERRY_SYRUP = (new ItemBase("strawberry_syrup")).setMaxStackSize(64);
     public static Item LEMON_SYRUP = (new ItemBase("lemon_syrup")).setMaxStackSize(64);

@@ -23,7 +23,7 @@ public class SmeltButton {
             if (_current instanceof Supplier) {
                 Object invobj = ((Supplier) _current).get();
                 if (invobj instanceof Map) {
-                    if(Math.random() < 0.5){
+                    if(Math.random() < 0.65){
                         if(((Slot) ((Map) invobj).get(0)).getStack().getItem().equals(Items.IRON_INGOT)){
                             ((Slot) ((Map) invobj).get(1)).putStack(new ItemStack(ItemInit.SMELTED_IRON, 1));
                         }else if(((Slot) ((Map) invobj).get(0)).getStack().getItem().equals(Items.GOLD_INGOT)){

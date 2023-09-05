@@ -19,6 +19,19 @@ import java.util.Random;
 public class HUD extends Gui {
     private static Minecraft minecraft = Minecraft.getMinecraft();
 
+    private static int[] numberArr = new int[6];
+    public static void Timerupdate(int time) {
+        int hour = time / 3600;
+        int min = time % 3600 / 60;
+        int sec = time % 3600 % 60;
+        numberArr[0] = hour;
+        numberArr[1] = min / 10;
+        numberArr[2] = min % 10;
+        numberArr[3] = sec / 10;
+        numberArr[4] = sec % 10;
+        numberArr[5] = time;
+    }
+
     @SubscribeEvent
     public void onRenderGameOverlay(RenderGameOverlayEvent event) {
         if (event.getType() == RenderGameOverlayEvent.ElementType.ALL) {
@@ -79,40 +92,51 @@ public class HUD extends Gui {
                 DrawManager.drawCenteredString(Data.Job,width * 0.9499F, height * 0.5740F, width * 0.0016F, new Color(96, 48, 23), false);
             }
 
-
             // 통화 요청
             if(Data.call_stat == 1){
                 DrawManager.drawTexture("gui/call_request/frame", width * 0.8516F, height * 0.6990F, 1.0D, 1.0D, (float) (width * 0.1411F), (float) (height * 0.2333F));
                 DrawManager.drawCenteredString(Data.CallRequest_Name,width * 0.9411F, height * 0.7877F, width * 0.0026F, new Color(0, 0, 0), false);
 
-                if(Data.CallRequest_Name == "양띵")
+                if(Data.CallRequest_Name.contains("양띵"))
                     DrawManager.drawTexture("gui/call_request/d7297", width * 0.8631F, height * 0.7416F, 1.0D, 1.0D, (float) (width * 0.0458F), (float) (height * 0.0814F));
-                else if(Data.CallRequest_Name == "서넹")
+                else if(Data.CallRequest_Name.contains("서넹"))
                     DrawManager.drawTexture("gui/call_request/seoneng", width * 0.8631F, height * 0.7416F, 1.0D, 1.0D, (float) (width * 0.0458F), (float) (height * 0.0814F));
-                else if(Data.CallRequest_Name == "후추")
+                else if(Data.CallRequest_Name.contains("후추"))
                     DrawManager.drawTexture("gui/call_request/huchu95", width * 0.8631F, height * 0.7416F, 1.0D, 1.0D, (float) (width * 0.0458F), (float) (height * 0.0814F));
-                else if(Data.CallRequest_Name == "삼식")
+                else if(Data.CallRequest_Name.contains("삼식"))
                     DrawManager.drawTexture("gui/call_request/samsik23", width * 0.8631F, height * 0.7416F, 1.0D, 1.0D, (float) (width * 0.0458F), (float) (height * 0.0814F));
-                else if(Data.CallRequest_Name == "눈꽃")
+                else if(Data.CallRequest_Name.contains("눈꽃"))
                     DrawManager.drawTexture("gui/call_request/noonkkob", width * 0.8631F, height * 0.7416F, 1.0D, 1.0D, (float) (width * 0.0458F), (float) (height * 0.0814F));
-                else if(Data.CallRequest_Name == "콩콩")
+                else if(Data.CallRequest_Name.contains("콩콩"))
                     DrawManager.drawTexture("gui/call_request/kong7", width * 0.8631F, height * 0.7416F, 1.0D, 1.0D, (float) (width * 0.0458F), (float) (height * 0.0814F));
-                else if(Data.CallRequest_Name == "다주")
+                else if(Data.CallRequest_Name.contains("다주"))
                     DrawManager.drawTexture("gui/call_request/daju", width * 0.8631F, height * 0.7416F, 1.0D, 1.0D, (float) (width * 0.0458F), (float) (height * 0.0814F));
-                else if(Data.CallRequest_Name == "루태")
+                else if(Data.CallRequest_Name.contains("루태"))
                     DrawManager.drawTexture("gui/call_request/rutaey", width * 0.8631F, height * 0.7416F, 1.0D, 1.0D, (float) (width * 0.0458F), (float) (height * 0.0814F));
                 else
                     DrawManager.drawTexture("gui/call_request/who", width * 0.8631F, height * 0.7416F, 1.0D, 1.0D, (float) (width * 0.0458F), (float) (height * 0.0814F));
             }
+
+            // 타이머
+            if(numberArr[5] > -1){
+                DrawManager.drawTexture("gui/timer/frame", width * 0.8593F, height * 0.0231F, 1.0D, 1.0D, (float) (width * 0.1314F), (float) (height * 0.0891F));
+
+                DrawManager.drawTexture("gui/timer/" + numberArr[0], width * 0.8702F, height * 0.0462F, 1.0D, 1.0D, (float) (width * 0.0172F), (float) (height * 0.0428F));
+                DrawManager.drawTexture("gui/timer/" + numberArr[1], width * 0.8985F, height * 0.0462F, 1.0D, 1.0D, (float) (width * 0.0172F), (float) (height * 0.0428F));
+                DrawManager.drawTexture("gui/timer/" + numberArr[2], width * 0.9163F, height * 0.0462F, 1.0D, 1.0D, (float) (width * 0.0172F), (float) (height * 0.0428F));
+                DrawManager.drawTexture("gui/timer/" + numberArr[3], width * 0.9426F, height * 0.0462F, 1.0D, 1.0D, (float) (width * 0.0172F), (float) (height * 0.0428F));
+                DrawManager.drawTexture("gui/timer/" + numberArr[4], width * 0.9602F, height * 0.0462F, 1.0D, 1.0D, (float) (width * 0.0172F), (float) (height * 0.0428F));
+            }
+
         }
         if (event.getType().equals(RenderGameOverlayEvent.ElementType.DEBUG)) {
             event.setCanceled(true);
             EntityPlayerSP entityPlayerSP = (Minecraft.getMinecraft()).player;
             GlStateManager.pushMatrix();
             GlStateManager.translate(5.0F, 15.0F, 1.0F);
-            DrawManager.drawString("" + (int)((EntityPlayer)entityPlayerSP).posX + " / " + (int)((EntityPlayer)entityPlayerSP).posY + " / " + (int)((EntityPlayer)entityPlayerSP).posZ, 0.0D, 0.0D, 1.0D, Color.WHITE, false);
-            DrawManager.drawString("" + ((EntityPlayer)entityPlayerSP).world.getBiome(entityPlayerSP.getPosition()).getBiomeName(), 0.0D, 11.0D, 1.0D, Color.WHITE, false);
-            DrawManager.drawString("" + ClientProxy.getCardinalDirection((EntityPlayer)entityPlayerSP), 0.0D, 21.0D, 1.0D, Color.WHITE, false);
+            DrawManager.drawString("" + (int)((EntityPlayer)entityPlayerSP).posX + " / " + (int)((EntityPlayer)entityPlayerSP).posY + " / " + (int)((EntityPlayer)entityPlayerSP).posZ, 0.0D, 30.0D, 1.0D, Color.WHITE, false);
+            DrawManager.drawString("" + ((EntityPlayer)entityPlayerSP).world.getBiome(entityPlayerSP.getPosition()).getBiomeName(), 0.0D, 41.0D, 1.0D, Color.WHITE, false);
+            DrawManager.drawString("" + ClientProxy.getCardinalDirection((EntityPlayer)entityPlayerSP), 0.0D, 51.0D, 1.0D, Color.WHITE, false);
             GlStateManager.popMatrix();
         }
     }

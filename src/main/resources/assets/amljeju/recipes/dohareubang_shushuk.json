@@ -1,19 +1,27 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "AAA",
-    "B  "
+
+  "pattern":
+  [
+      "AAA",
+      "B  "
   ],
-  "key": {
-    "A": {
-      "item": "amljeju:smelted_diamond",
-      "data": 0
-    },
-    "B": {
-      "item": "jejulifemod:dolhareubang_default",
-      "data": 0
-    }
+
+  "key":
+  {
+      "A":
+      {
+          "item": "minecraft:diamond",
+          "data": 0
+      },
+      
+      "B":
+      {
+          "item": "jejulifemod:dolhareubang_default",
+          "data": 0
+      }
   },
+
   "result": {
     "item": "jejulifemod:dolhareubang_shushuk",
     "data": 0

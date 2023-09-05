@@ -15,14 +15,14 @@ public class Gui_Call extends GuiScreen {
 
     public void initGui() {
         addButton(new GuiButtonImage(0, (int)(width * 0.4473F), (int)(height * 0.6814F), (int)(width * 0.0369F), (int)(height * 0.0657F), "call/entire"));
-        addButton(new GuiButtonImage(1, (int)(width * 0.3057F), (int)(height * 0.3472F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/d7297"));
-        addButton(new GuiButtonImage(2, (int)(width * 0.4072F), (int)(height * 0.3472F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/seoneng"));
-        addButton(new GuiButtonImage(3, (int)(width * 0.5088F), (int)(height * 0.3472F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/huchu95"));
-        addButton(new GuiButtonImage(4, (int)(width * 0.6104F), (int)(height * 0.3472F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/samsik23"));
-        addButton(new GuiButtonImage(5, (int)(width * 0.3057F), (int)(height * 0.5185F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/noonkkob"));
-        addButton(new GuiButtonImage(6, (int)(width * 0.4072F), (int)(height * 0.5185F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/kong7"));
-        addButton(new GuiButtonImage(7, (int)(width * 0.5088F), (int)(height * 0.5185F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/daju"));
-        addButton(new GuiButtonImage(8, (int)(width * 0.6104F), (int)(height * 0.5185F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/rutaey"));
+        addButton(new GuiButtonImage(1, (int)(width * 0.3057F), (int)(height * 0.3492F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/d7297"));
+        addButton(new GuiButtonImage(2, (int)(width * 0.4072F), (int)(height * 0.3492F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/seoneng"));
+        addButton(new GuiButtonImage(3, (int)(width * 0.5088F), (int)(height * 0.3492F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/huchu95"));
+        addButton(new GuiButtonImage(4, (int)(width * 0.6104F), (int)(height * 0.3492F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/samsik23"));
+        addButton(new GuiButtonImage(5, (int)(width * 0.3057F), (int)(height * 0.5205F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/noonkkob"));
+        addButton(new GuiButtonImage(6, (int)(width * 0.4072F), (int)(height * 0.5205F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/kong7"));
+        addButton(new GuiButtonImage(7, (int)(width * 0.5088F), (int)(height * 0.5205F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/daju"));
+        addButton(new GuiButtonImage(8, (int)(width * 0.6104F), (int)(height * 0.5205F), (int)(width * 0.0843F), (int)(height * 0.15F), "member/rutaey"));
         addButton(new GuiButtonImage(9, (int)(width * 0.5156F), (int)(height * 0.6814F), (int)(width * 0.0369F), (int)(height * 0.0657F), "call/village"));
     }
 

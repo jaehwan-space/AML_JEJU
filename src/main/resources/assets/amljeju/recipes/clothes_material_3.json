@@ -1,19 +1,30 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
+
+  "pattern": 
+[
+
     "AAB"
-  ],
-  "key": {
-    "A": {
+
+
+    ],
+
+  "key": 
+{
+    "A": 
+{
       "item": "gmm:clothes_fabric",
       "data": 0
     },
-    "B": {
-      "item": "amljeju:smelted_gold",
+    "B": 
+{
+      "item": "minecraft:gold_ingot",
       "data": 0
     }
   },
-  "result": {
+
+  "result": 
+{
     "item": "gmm:clothes_material_3",
     "data": 0
   }
